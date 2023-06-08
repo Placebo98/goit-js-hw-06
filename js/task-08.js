@@ -19,12 +19,12 @@ function onHandleSubmit(event) {
   if (email.value === "" || password.value === "") {
     alert("всі поля повинні бути заповнені");
   } else {
-    const formData = new FormData(event.currentTarget);
+    const formData = {
+      email: email.value,
+      password: password.value,
+    };
     console.log(formData);
-    formData.forEach((value, name) => {
-      console.log(`onHanleSubmit -> name`, name);
-      console.log(`onHanleSubmit -> value`, value);
-      event.currentTarget.reset();
-    });
+    event.currentTarget.reset();
   }
 }
+

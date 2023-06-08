@@ -29,4 +29,4 @@ const arr = ingredients.map((ingredient) => {
 const listEl = document.querySelector("#ingredients");
 
 listEl.append(...arr);
-console.log(listEl);
+

@@ -9,7 +9,7 @@ const textInput = document.querySelector("#validation-input");
 
 textInput.addEventListener("blur", onBlur);
 function onBlur() {
-  const textEl = textInput.value.trim();
+  const textEl = textInput.value;
   if (textEl.length === Number(textInput.dataset.length)) {
     textInput.classList.add("valid");
     textInput.classList.remove("invalid");
